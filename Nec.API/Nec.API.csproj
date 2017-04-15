@@ -333,7 +333,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nec.Model\Nec.Model\Nec.Model.csproj">
+    <ProjectReference Include="..\Nec.Model\Nec.Model.csproj">
       <Project>{031e14a2-574c-4deb-b05f-844bf1774f54}</Project>
       <Name>Nec.Model</Name>
     </ProjectReference>
