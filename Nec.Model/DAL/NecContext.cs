@@ -4,8 +4,8 @@ namespace Nec.Model.DAL
 {
     public class NecContext : DbContext
     {
-        public DbSet<FunFact> FunFacts { get; set; }
-        public DbSet<Tag> Tags { get; set; }
+        public virtual IDbSet<FunFact> FunFacts { get; set; }
+        public virtual IDbSet<Tag> Tags { get; set; }
 
         public NecContext() : base("NecDB")
         {

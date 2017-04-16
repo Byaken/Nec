@@ -50,9 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\NecContext.cs" />
-    <Compile Include="FunFact.cs" />
+    <Compile Include="Model\FunFact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tag.cs" />
+    <Compile Include="Model\Tag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

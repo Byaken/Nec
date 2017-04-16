@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseFunFactManager.cs" />
-    <Compile Include="ChuckNorrisFunFactManager.cs" />
+    <Compile Include="FunFactManagers\BaseFunFactManager.cs" />
+    <Compile Include="FunFactManagers\ChuckNorrisFunFactManager.cs" />
     <Compile Include="ExtensionMethods\EnumerableExtensionMethods.cs" />
-    <Compile Include="IFunFactManager.cs" />
+    <Compile Include="FunFactManagers\IFunFactManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

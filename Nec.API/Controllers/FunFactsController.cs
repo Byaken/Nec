@@ -23,21 +23,21 @@ namespace Nec.API.Controllers
         }
 
         // POST: api/FunFacts
-        public void Post([FromBody]string value)
+        public bool Post([FromBody]string value)
         {
-            FunFactManager.AddFunFact(value);
+            return FunFactManager.AddFunFact(value);
         }
 
         // PUT: api/FunFacts/5
-        public void Put(int id, [FromBody]string value)
+        public bool Put(int id, [FromBody]string value)
         {
-            FunFactManager.ModifyFunFact(id, value);
+            return FunFactManager.ModifyFunFact(id, value);
         }
 
         // DELETE: api/FunFacts/5
-        public void Delete(int id)
+        public bool Delete(int id)
         {
-            FunFactManager.DeleteFunFact(id);
+            return FunFactManager.DeleteFunFact(id);
         }
     }
 }

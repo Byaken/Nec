@@ -13,7 +13,7 @@ namespace Nec
         /// <summary>
         /// TODO: Repository pattern could be implemented, so we decouple from the DB
         /// </summary>
-        protected NecContext NecContext;
+        public NecContext NecContext { get; set; }
 
 
 
@@ -24,6 +24,10 @@ namespace Nec
 
         public bool AddFunFact(string description)
         {
+            if (string.IsNullOrEmpty(description))
+            {
+                return false;
+            }
             try
             {
                 var funFact = new FunFact
@@ -46,6 +50,10 @@ namespace Nec
 
         public bool DeleteFunFact(int funFactId)
         {
+            if (funFactId < 0)
+            {
+                return false;
+            }
             try
             {
                 var funFactToRemove = NecContext.FunFacts.FirstOrDefault(x => x.FunFactId == funFactId);
@@ -66,6 +74,7 @@ namespace Nec
 
         public IList<FunFact> GetMostPopularFunFacts(int numberOfFunFacts)
         {
+
             try
             {
                 var relatedFunFacts = this.GetRelatedFunFacts();
@@ -93,6 +102,10 @@ namespace Nec
 
         public bool ModifyFunFact(int funFactId, string description)
         {
+            if (funFactId < 0 || string.IsNullOrEmpty(description))
+            {
+                return false;
+            }
             try
             {
                 var funFactToModify = NecContext.FunFacts.FirstOrDefault(x => x.FunFactId == funFactId);
